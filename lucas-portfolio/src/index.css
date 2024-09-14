@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "jost";
+  src: url(/src/assets/fonts/Jost/Jost-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "kumbh-sans";
+  src: url(/src/assets/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+
+@font-face {
+  font-family: "koulen";
+  src: url(/src/assets/fonts/Koulen/Koulen-Regular.ttf);
+}
+
+@font-face {
+  font-family: "roboto                        ";
+  src: url(/src/assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+.layout-grid {
+  width: 80%;
+  height: 100%;
+}
+
+.highlighted-text {
+  color: #7581f1;
+}
