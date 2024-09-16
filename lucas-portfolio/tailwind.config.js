@@ -9,6 +9,9 @@ export default {
       "paragraphes-koulen": ["koulen", "cursive"],
     },
     extend: {
+      animation: {
+        pulse: "pulse 1s linear infinite", // Aumenta a duração do spin para 2 segundos
+      },
       colors: {
         "purple-dark": "#1C1D2B",
         "purple-mid-dark": "#2C2E43",
@@ -18,6 +21,14 @@ export default {
         "gray-mid-dark": "#656A7B",
         "gray-light": "#BEBFC9",
         beige: "#EEEEEE",
+        "light-white": "rgba(255, 255, 255, 0.3)",
+      },
+      // backgroundColor: {
+      //   'multi-layer': 'linear-gradient(to bottom, white 0%, transparent 100%), rgba(0, 0, 0, 0.1)',
+      //   'multi-layer': 'bg-gradient, rgba(0, 0, 0, 0.1)',
+      // },
+      boxShadow: {
+        long: "0 2px 15px rgba(137,145,220,0.3)",
       },
     },
   },
