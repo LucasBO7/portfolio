@@ -85,13 +85,13 @@ const App = () => {
       </section>
 
       {/* About Me Section */}
-      <section className="px-[5%] flex flex-row justify-between items-center bg-purple-dark h-screen">
-        <div className=" w-[40%]">
-          <h2 className="pb-20 font-medium text-white font-titles-kumbh-sans uppercase text-[53px]">
-            Um pouco sobre mim...
-          </h2>
+      <section className="px-[10%] py-40 flex flex-row flex-wrap max-xl:gap-32 justify-between items-center bg-purple-dark h-fit max-xl:flex-col">
+        <h2 className="pb-20 font-medium text-white font-titles-kumbh-sans uppercase text-[53px] w-full max-xl:text-center">
+          Um pouco sobre mim...
+        </h2>
 
-          <p className="font-paragraphes-koulen text-xl text-gray-light">
+        <div className="w-[50%] max-xl:w-[90%]">
+          <p className="font-paragraphes-koulen text-lg text-gray-light text-justify pr-14">
             Minha jornada no mundo da programação surgiu em 2020 durante a
             pandemia do covid-19. foi naquele momento aos 13 anos que tive o
             primeiro contato com a programação.
@@ -120,19 +120,19 @@ const App = () => {
           </p>
         </div>
 
-        <img src={AboutMeImgs} alt="" />
+        <img className="w-[500px] max-wl:w[100%]" src={AboutMeImgs} alt="" />
       </section>
 
       {/* Knowledge Section */}
-      <section className="px-[15%] h-fit pb-56 bg-purple-mid-dark">
+      <section className="px-[10%] h-fit pb-56 bg-purple-mid-dark">
         <h2 className="font-medium text-white font-titles-kumbh-sans text-right py-28 pb-44 uppercase text-[53px]">
           Conhecimento
         </h2>
 
         {/* All Cards */}
-        <div className="flex flex-row flex-wrap justify-between">
+        <div className="flex flex-row flex-wrap justify-around w-full">
           {/* Card */}
-          <article className="flex flex-row flex-wrap justify-start gap-[20px] h-fit w-[36%]">
+          <article className="flex flex-row flex-wrap justify-start max-2xl:justify-center gap-[20px] h-fit w-[36%]">
             <h3 className="font-titles-kumbh-sans font-medium text-4xl text-center uppercase w-full text-white pb-[30px]">
               Tecnologias
             </h3>
@@ -145,7 +145,7 @@ const App = () => {
           </article>
 
           {/* Card */}
-          <article className="flex flex-row flex-wrap justify-between pt-7 gap-[20px] h-fit w-[36%]">
+          <article className="flex flex-row flex-wrap justify-between max-2xl:justify-center pt-7 gap-[20px] h-fit w-[36%]">
             <h3 className="font-titles-kumbh-sans font-medium text-4xl text-center uppercase w-full text-white pb-[30px]">
               Frameworks e Libs
             </h3>
@@ -170,7 +170,7 @@ const App = () => {
           </article>
 
           {/* Card */}
-          <article className="flex flex-row flex-wrap justify-between pt-32 gap-[20px] h-fit w-[36%]">
+          <article className="flex flex-row flex-wrap justify-between max-2xl:justify-center pt-32 gap-[20px] h-fit w-[36%]">
             <h3 className="font-titles-kumbh-sans font-medium text-4xl text-center uppercase w-full text-white pb-[30px]">
               versionamento e gestão
             </h3>
