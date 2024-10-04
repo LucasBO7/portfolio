@@ -38,42 +38,67 @@ import { MdPerson } from "react-icons/md";
 import { PiBrain } from "react-icons/pi";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { FixedScrollBar } from "./Components/FixedScrollBar";
+import BackgroundLights from "./assets/homebackground.png";
+import RedBackgroundLights from "./assets/redbkgroundlight.png";
 
 const App = () => {
   return (
     <main className="">
+      <div className="absolute pt-[500px] pl-[-200px] z-0 w-full h-screen bg-cover bg-center">
+        <img
+          className="w-full h-full object-cover"
+          src={BackgroundLights}
+          alt="Imagem de fundo"
+        />
+      </div>
+
       {/* Home Section */}
-      <section className="px-[5%] bg-purple-mid-dark h-screen flex justify-center items-center">
+      <section
+        id="presentation"
+        className="px-[5%] bg-purple-mid-dark h-screen flex justify-center items-center z-10"
+      >
         <div className="flex flex-col justify-start items-center">
-          <h1 className="font-extralight text-white font-titles-jost text-[78px] uppercase tracking-widest">
+          <h1 className="font-extralight text-white font-titles-jost text-[78px] z-10 uppercase tracking-widest">
             Lucas Bianchezzi Oliveira
           </h1>
 
-          <div className="flex flex-row justify-between items-center h-[450px] w-full">
+          <div className="flex flex-row justify-between items-center z-10 h-[450px] w-full">
             <div className="flex flex-wrap items-center justify-center w-64">
-              <h2 className="font-subtitles-roboto text-purple-mid text-4xl uppercase font-extrabold w-64 pb-4 drop-shadow-md shadow-black">
+              <h2 className="font-subtitles-roboto text-purple-mid text-center text-4xl uppercase font-extrabold w-64 pb-4 drop-shadow-md shadow-black">
                 Full-Stack developer
               </h2>
 
               <div className="flex flex-row justify-around w-48">
-                <a href="" className="">
+                <a
+                  target="_blank"
+                  href="mailto:lucasbianchezzi700@gmail.com"
+                  className=""
+                >
                   <BiLogoGmail className="w-[45px] h-[45px] p-[5px] bg-[#8991DC] rounded-full text-purple-mid-dark hover:shadow-long hover:shadow-purple-mid transition-all duration-200" />
                 </a>
 
-                <a href="" className="">
+                <a
+                  target="_blank"
+                  href="https://github.com/LucasBO7"
+                  className=""
+                >
                   <BsGithub className="w-[45px] h-[45px] text-[#8991dc] rounded-full hover:shadow-long hover:shadow-purple-mid transition-all duration-200" />
                 </a>
 
-                <a href="" className="">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/lucasb-oliveira/"
+                  className=""
+                >
                   <TiSocialLinkedin className="w-[45px] h-[45px] p-[5px] bg-[#8991DC] rounded-full text-purple-mid-dark hover:shadow-long hover:shadow-purple-mid transition-all duration-200" />
                 </a>
               </div>
             </div>
 
-            <img src={Selfie} alt="" />
+            <img className="z-10" src={Selfie} alt="" />
 
             <img
-              className="absolute bottom-16 left-[50%] animate-bounce"
+              className="absolute bottom-16 left-[50%] animate-bounce z-10"
               src={DownIcon}
               alt=""
             />
@@ -85,7 +110,10 @@ const App = () => {
       </section>
 
       {/* About Me Section */}
-      <section className="px-[10%] py-40 flex flex-row flex-wrap max-xl:gap-32 justify-between items-center bg-purple-dark h-fit max-xl:flex-col">
+      <section
+        id="aboutme"
+        className="px-[10%] py-40 z-20 flex flex-row flex-wrap max-xl:gap-32 justify-between items-center bg-purple-dark h-fit max-xl:flex-col"
+      >
         <h2 className="pb-20 font-medium text-white font-titles-kumbh-sans uppercase text-[53px] w-full max-xl:text-center">
           Um pouco sobre mim...
         </h2>
@@ -124,7 +152,16 @@ const App = () => {
       </section>
 
       {/* Knowledge Section */}
-      <section className="px-[10%] h-fit pb-56 bg-purple-mid-dark">
+      <div className="absolute  pl-56 z-0 w-full h-screen bg-cover bg-center">
+        <img
+          className="w-full h-full object-cover"
+          src={RedBackgroundLights}
+        />
+      </div>
+      <section
+        id="knowledge"
+        className="px-[10%] h-fit pb-56 bg-purple-mid-dark z-10"
+      >
         <h2 className="font-medium text-white font-titles-kumbh-sans text-right py-28 pb-44 uppercase text-[53px]">
           Conhecimento
         </h2>
@@ -230,12 +267,16 @@ const App = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="px-[5%] h-screen bg-[#282A40] text-white uppercase text-right">
-        <h2 className="font-titles-kumbh-sans font-medium text-5xl text-white text-right py-28 text-[53px]">
+      <section
+        id="projects"
+        className="flex flex-col items-center justify-center px-[5%] py-7 h-[100%] bg-[#282A40] text-white uppercase text-right"
+      >
+        <h2 className="font-titles-kumbh-sans font-medium text-5xl text-white text-right w-[89%] py-28 text-[53px]">
           Projetos
         </h2>
 
-        <article className="flex items-center gap-11 h-[480px]">
+        {/* Projeto 1 */}
+        <article className="flex items-center gap-11 h-[480px] w-[90%] mb-24">
           <img src={GamerTabletImg} alt="" />
 
           {/* Infos */}
@@ -275,7 +316,54 @@ const App = () => {
           </div>
         </article>
 
-        <a href="">Outros Projetos</a>
+        {/* Projeto 2 */}
+        <article className="flex items-center justify-end gap-11 h-[480px] w-[90%] mb-24">
+          {/* Infos */}
+          <div className="flex flex-col items-start mt-20 h-full w-[500px] text-right">
+            <h3 className="font-titles-jost text-[24px] uppercase tracking-widest text-right">
+              Projeto Gamer
+            </h3>
+            <p className="font-paragraphes-koulen text-[16px] text-justify tracking-widest text-purple-light pb-[36px]">
+              Projeto de gerenciamento de equipes e jogadores (participantes das
+              equipes)
+            </p>
+
+            <h4 className="font-paragraphes-koulen text-[16px] tracking-widest text-white">
+              Linguagens
+            </h4>
+            <p className="font-paragraphes-koulen text-[16px] tracking-widest text-purple-light pb-[36px]">
+              C# SQL CSS HTML JS
+            </p>
+
+            <h4 className="font-paragraphes-koulen text-[16px] tracking-widest text-white">
+              padrão de projeto
+            </h4>
+            <p className="font-paragraphes-koulen text-[16px] tracking-widest text-purple-light pb-[36px]">
+              asp.net core mvc + web.api restfull
+            </p>
+
+            {/* Links úteis */}
+            <div className="flex justify-between w-[100px] mt-[-25px]">
+              <a href="">
+                <BsGithub className="w-[45px] h-[45px] p-[3px] text-[#8991dc] rounded-full hover:shadow-long hover:shadow-purple-mid transition-all duration-200" />
+              </a>
+
+              <a href="">
+                <FiExternalLink className="w-[45px] h-[45px] p-[3px] text-[#8991dc] hover:shadow-long rounded-lg hover:shadow-purple-mid transition-all duration-200" />
+              </a>
+            </div>
+          </div>
+
+          <img src={GamerTabletImg} alt="" />
+        </article>
+
+        <a
+          target="_blank"
+          className="bg-[#1C1D2B] p-5 rounded-xl hover:bg-[#191A26] transition-all duration-300"
+          href="https://github.com/LucasBO7?tab=repositories"
+        >
+          Outros Projetos
+        </a>
       </section>
 
       <footer className="px-[5%] h-[345px] w-full bg-purple-dark">
@@ -284,7 +372,7 @@ const App = () => {
           <div className="flex justify-between w-[40%]">
             <a
               className="flex justify-center font-titles-kumbh-sans text-white w-fit p-2 hover:animate-pulse"
-              href=""
+              href="#presentation"
             >
               <HiHome className="h-[24px] w-[24px] text-white mr-[12px]" />
               Home
@@ -292,7 +380,7 @@ const App = () => {
 
             <a
               className="flex justify-center font-titles-kumbh-sans text-white w-fit p-2 hover:animate-pulse"
-              href=""
+              href="#aboutme"
             >
               <MdPerson className="h-[26px] w-[26px] text-white mr-[12px]" />
               Sobre
@@ -300,7 +388,7 @@ const App = () => {
 
             <a
               className="flex justify-center font-titles-kumbh-sans text-white w-fit p-2 hover:animate-pulse"
-              href=""
+              href="#knowledge"
             >
               <PiBrain className="h-[24px] w-[24px] text-white mr-[12px]" />
               Conhecimento
@@ -308,7 +396,7 @@ const App = () => {
 
             <a
               className="flex justify-center font-titles-kumbh-sans text-white w-fit p-2 hover:animate-pulse"
-              href=""
+              href="#projects"
             >
               <HiOutlineLightBulb className="h-[24px] w-[24px] text-white mr-[12px]" />
               Projetos

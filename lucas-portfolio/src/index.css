@@ -22,6 +22,10 @@
   src: url(/src/assets/fonts/Roboto/Roboto-Regular.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .layout-grid {
   width: 80%;
   height: 100%;
