@@ -40,6 +40,7 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 import { FixedScrollBar } from "./Components/FixedScrollBar";
 import BackgroundLights from "./assets/homebackground.png";
 import RedBackgroundLights from "./assets/redbkgroundlight.png";
+import { ContactUsSection } from "./Components/ContactUs";
 
 const App = () => {
   return (
@@ -153,10 +154,7 @@ const App = () => {
 
       {/* Knowledge Section */}
       <div className="absolute  pl-56 z-0 w-full h-screen bg-cover bg-center">
-        <img
-          className="w-full h-full object-cover"
-          src={RedBackgroundLights}
-        />
+        <img className="w-full h-full object-cover" src={RedBackgroundLights} />
       </div>
       <section
         id="knowledge"
@@ -269,7 +267,7 @@ const App = () => {
       {/* Projects Section */}
       <section
         id="projects"
-        className="flex flex-col items-center justify-center px-[5%] py-7 h-[100%] bg-[#282A40] text-white uppercase text-right"
+        className="flex flex-col items-center justify-center px-[5%] py-7 pb-20 h-[100%] bg-[#282A40] text-white uppercase text-right"
       >
         <h2 className="font-titles-kumbh-sans font-medium text-5xl text-white text-right w-[89%] py-28 text-[53px]">
           Projetos
@@ -365,6 +363,8 @@ const App = () => {
           Outros Projetos
         </a>
       </section>
+
+      <ContactUsSection />
 
       <footer className="px-[5%] h-[345px] w-full bg-purple-dark">
         <div className="w-full h-fit pt-[100px] flex flex-col items-center justify-center">

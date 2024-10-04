@@ -28,7 +28,7 @@ export default {
       //   'multi-layer': 'bg-gradient, rgba(0, 0, 0, 0.1)',
       // },
       boxShadow: {
-        long: "0 2px 15px rgba(137,145,220,0.3)",
+        'long': "0 2px 15px rgba(137,145,220,0.3)",
       },
     },
   },
