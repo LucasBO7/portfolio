@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { InputLabel } from "../Inputs";
+import { InputLabel, TextAreaInputLabel } from "../Inputs";
+import ContactImg from "../../assets/contact.png";
 
 export const ContactUsSection = () => {
   const form = useRef();
@@ -9,15 +10,15 @@ export const ContactUsSection = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_1ez4n4g", "template_z5w250n", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
+      .sendForm("service_1ez4n4g", "template_hpmaile", form.current, {
+        publicKey: "JJsEqor9-Y-KKBNoe",
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          alert("Mensagem enviada com sucesso!");
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          alert("Falha ao enviar mensagem!");
         }
       );
   };
@@ -30,7 +31,7 @@ export const ContactUsSection = () => {
         onSubmit={sendEmail}
       >
         <h1 className="font-titles-kumbh-sans font-medium text-5xl text-white py-6">Contato</h1>
-        
+
         <InputLabel
           labelTxt={"Name"}
           for_name={"user_name"}
@@ -43,12 +44,13 @@ export const ContactUsSection = () => {
           placeholder={"Insira seu email..."}
         />
 
-        <InputLabel
+        <TextAreaInputLabel
           labelTxt={"Message"}
-          for_name={"messsage"}
+          for_name={"message"}
           placeholder={"Insira a mensagem do email..."}
+          inputStyle={"h-fit"}
         />
-        
+
         <button className="
         bg-purple-mid text-black
          w-[80%] rounded-md p-3  
@@ -58,10 +60,14 @@ export const ContactUsSection = () => {
         {/* <input type="submit" value="Send" /> */}
       </form>
 
-      <p>
-        Entre em contato comigo caso queira tirar alguma dúvida, conversar sobre
-        tecnologia ou proposta!
-      </p>
+      <div className="w-[45%] py-6 flex flex-col items-center justify-center gap-12 border-l-2 border-purple-mid pl-14">
+        <p className="font-titles-jost text-2xl text-left text-purple-mid">
+          Entre em contato comigo caso queira tirar alguma dúvida, conversar sobre
+          tecnologia ou o que for!
+        </p>
+
+        <img className="h-48" src={ContactImg} alt="Ícone de contato" />
+      </div>
     </section>
   );
 };
