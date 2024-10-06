@@ -72,7 +72,7 @@ const App = () => {
         {/* All Cards */}
         <div className="flex flex-row flex-wrap justify-around w-full">
           {/* Card */}
-          <article className="flex flex-row flex-wrap justify-start max-2xl:justify-center gap-[20px] h-fit w-[36%]">
+          <article className="flex flex-row flex-wrap justify-start max-2xl:justify-center gap-[20px] h-fit w-[36%] mb-28">
             <h3 className="font-titles-kumbh-sans font-medium text-4xl text-center uppercase w-full text-white pb-[30px]">
               Tecnologias
             </h3>
@@ -85,7 +85,7 @@ const App = () => {
           </article>
 
           {/* Card */}
-          <article className="flex flex-row flex-wrap justify-between max-2xl:justify-center pt-7 gap-[20px] h-fit w-[36%]">
+          <article className="flex flex-row flex-wrap justify-between max-2xl:justify-center pt-7 gap-[20px] h-fit w-[40%]">
             <h3 className="font-titles-kumbh-sans font-medium text-4xl text-center uppercase w-full text-white pb-[30px]">
               Frameworks e Libs
             </h3>
@@ -127,6 +127,9 @@ const App = () => {
               Metodologias e documentações
             </h3>
 
+            <p className="font-subtitles-roboto text-[25px] text-white text-opacity-75 py-[20px] w-full bg-[#393E46] text-center rounded-[16px] ">
+              SCRUM
+            </p>
             <p className="font-subtitles-roboto text-[25px] text-white text-opacity-75 py-[20px] w-full bg-[#393E46] text-center rounded-[16px] ">
               Metodologias Ágeis
             </p>

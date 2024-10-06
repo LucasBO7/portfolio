@@ -103,9 +103,9 @@ export const AboutMeSection = () => {
                     <span className="highlighted-text">xamarin</span>, entre outros.
                     <br />
                     <br /> Além disso, desde pequeno tenho realizado atividades físicas,
-                    já havendo participado de diversos campeonatos e realizado diversas
-                    conquistas em natação, futsal, judô e handebol. <br />
-                    Cheguei a realizar e ganhar medalha de bronze no OBA de 2018.
+                    já havendo participado de diversos campeonatos em natação, futsal, judô e handebol. <br />
+                    Participei também da Olimpíada Brasileira de Astronomia e Astronáutica (OBA) em 2018, onde ganhei a medalha de bronze.<br />
+                    (FALAR DO GAC TBM)
                 </p>
             </div>
 
