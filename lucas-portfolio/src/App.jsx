@@ -25,6 +25,7 @@ import TrelloCardImg from "./assets/trello.png";
 import AzureDevopsCardImg from "./assets/azuredevops.png";
 
 import GamerTabletImg from "./assets/project/GamerTabletProject.png";
+import EventPlusTabletImg from "./assets/project/eventplusTabletProject.png";
 // import TabletImg from "./assets/project/tablet.png";
 // import ProjectGamerImg from "./assets/project/projectgamer.png";
 
@@ -41,6 +42,7 @@ import ProjectBackgroundLights from "./assets/projectlights.png";
 import { ContactUsSection } from "./Components/ContactUs";
 import { AboutMeSection, HomeSection } from "./Components/Sections";
 import { Paragraph, SndParagraph } from "./Components/Texts";
+import { LeftCardProject, RightCardProject } from "./Components/Cards";
 
 const App = () => {
   return (
@@ -150,90 +152,35 @@ const App = () => {
           Projetos
         </h2>
 
-        {/* Projeto 1 */}
-        <article className="flex items-center justify-start gap-11 w-[90%] mb-24 max-xl:flex-wrap max-xl:justify-center max-xl:gap-0">
-          <img src={GamerTabletImg} alt="" />
+        <LeftCardProject
+          SiteImg={GamerTabletImg}
+          title="Projeto Gamer"
+          description={
+            "Projeto de gerenciamento de equipes e jogadores (participantes das equipes)"
+          }
+          languages={"C# SQL CSS HTML JS"}
+          tools={"Banco de dados SQL Server - "}
+          projectPattern={"asp.net core mvc + web.api restfull"}
+          repositoryLink={
+            "https://github.com/LucasBO7/senai-curso-repos/tree/main/Back-end-2/Projeto_Gamer_mvc"
+          }
+          websiteLink={"https://senai-curso-repos.vercel.app/"}
+        />
 
-          {/* Infos */}
-          <div className="flex flex-col items-start mt-20 h-full w-[500px] text-left max-xl:m-0">
-            <h3 className="font-titles-jost text-[24px] uppercase tracking-widest">
-              Projeto Gamer
-            </h3>
-            <p className="font-paragraphes-koulen text-[16px] tracking-widest text-purple-light pb-[36px]">
-              Projeto de gerenciamento de equipes e jogadores (participantes das
-              equipes )
-            </p>
-
-            <h4 className="font-paragraphes-koulen text-[16px] tracking-widest text-white">
-              Linguagens
-            </h4>
-            <p className="font-paragraphes-koulen text-[16px] tracking-widest text-purple-light pb-[36px]">
-              C# SQL CSS HTML JS
-            </p>
-
-            <h4 className="font-paragraphes-koulen text-[16px] tracking-widest text-white">
-              padrão de projeto
-            </h4>
-            <p className="font-paragraphes-koulen text-[16px] tracking-widest text-purple-light pb-[36px]">
-              asp.net core mvc + web.api restfull
-            </p>
-
-            {/* Links úteis */}
-            <div className="flex justify-between w-[100px] mt-[-25px]">
-              <a
-                target="_blank"
-                href="https://github.com/LucasBO7/senai-curso-repos/tree/main/Back-end-2/Projeto_Gamer_mvc"
-              >
-                <BsGithub className="w-[45px] h-[45px] p-[3px] text-[#8991dc] rounded-full hover:shadow-long hover:shadow-purple-mid transition-all duration-200" />
-              </a>
-
-              <a target="_blank" href="">
-                <FiExternalLink className="w-[45px] h-[45px] p-[3px] text-[#8991dc] hover:shadow-long rounded-lg hover:shadow-purple-mid transition-all duration-200" />
-              </a>
-            </div>
-          </div>
-        </article>
-
-        {/* Projeto 2 */}
-        <article className="flex items-end justify-end gap-11 h-fit w-[90%] mb-24 max-xl:flex-wrap-reverse max-xl:justify-center max-xl:gap-0">
-          {/* Infos */}
-          <div className="flex flex-col items-start mt-20 h-full w-[500px] text-left max-xl:m-0">
-            <h3 className="font-titles-jost text-[24px] uppercase tracking-widest text-left">
-              Projeto Gamer
-            </h3>
-            <p className="font-paragraphes-koulen text-[16px] text-justify tracking-widest text-purple-light pb-[36px]">
-              Projeto de gerenciamento de equipes e jogadores (participantes das
-              equipes)
-            </p>
-
-            <h4 className="font-paragraphes-koulen text-[16px] tracking-widest text-white">
-              Linguagens
-            </h4>
-            <p className="font-paragraphes-koulen text-[16px] tracking-widest text-purple-light pb-[36px]">
-              C# SQL CSS HTML JS
-            </p>
-
-            <h4 className="font-paragraphes-koulen text-[16px] tracking-widest text-white">
-              padrão de projeto
-            </h4>
-            <p className="font-paragraphes-koulen text-[16px] tracking-widest text-purple-light pb-[36px]">
-              asp.net core mvc + web.api restfull
-            </p>
-
-            {/* Links úteis */}
-            <div className="flex justify-between w-[100px] mt-[-25px]">
-              <a href="">
-                <BsGithub className="w-[45px] h-[45px] p-[3px] text-[#8991dc] rounded-full hover:shadow-long hover:shadow-purple-mid transition-all duration-200" />
-              </a>
-
-              <a href="">
-                <FiExternalLink className="w-[45px] h-[45px] p-[3px] text-[#8991dc] hover:shadow-long rounded-lg hover:shadow-purple-mid transition-all duration-200" />
-              </a>
-            </div>
-          </div>
-
-          <img src={GamerTabletImg} alt="" />
-        </article>
+        <RightCardProject
+          SiteImg={EventPlusTabletImg}
+          title="Projeto Event Plus"
+          description={
+            "Projeto de gerenciamento, acompanhamento e inscrição em eventos realizado na Escola de Informática. Este projeto foi realizado nos processos inicias de desenvolvimento de aplicações, sendo um dos primeiros grandes projetos realizados."
+          }
+          languages={"JavaScript HTML CSS"}
+          tools={"Banco de dados Azure - React Router DOM - Axios"}
+          projectPattern={"react js (web app) + Azure Services"}
+          repositoryLink={
+            "https://github.com/LucasBO7/EventPlusDeploy/tree/main"
+          }
+          websiteLink={"https://event-plus-deploy-chi.vercel.app/"}
+        />
 
         <a
           target="_blank"
