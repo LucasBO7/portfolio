@@ -36,21 +36,15 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 import { FixedScrollBar } from "./Components/FixedScrollBar";
 import BackgroundLights from "./assets/homebackground.png";
 import RedBackgroundLights from "./assets/redbkgroundlight.png";
+import ProjectBackgroundLights from "./assets/projectlights.png";
 
 import { ContactUsSection } from "./Components/ContactUs";
 import { AboutMeSection, HomeSection } from "./Components/Sections";
+import { Paragraph, SndParagraph } from "./Components/Texts";
 
 const App = () => {
   return (
     <main className="">
-      <div className="absolute pt-[500px] pl-[-200px] z-0 w-full h-screen bg-cover bg-center">
-        <img
-          className="w-full h-full object-cover"
-          src={BackgroundLights}
-          alt="Imagem de fundo"
-        />
-      </div>
-
       {/* Home Section */}
       <HomeSection />
 
@@ -58,21 +52,18 @@ const App = () => {
       <AboutMeSection />
 
       {/* Knowledge Section */}
-      <div className="absolute  pl-56 z-0 w-full h-screen bg-cover bg-center">
-        <img className="w-full h-full object-cover" src={RedBackgroundLights} />
-      </div>
       <section
         id="knowledge"
-        className="px-[10%] h-fit pb-56 bg-purple-mid-dark z-10"
+        className="px-[10%] h-fit pb-56 bg-purple-mid-dark z-10 bg-[url('/src/assets/redbkgroundlight.png')] bg-no-repeat bg-auto bg-[right_top_-20rem]"
       >
-        <h2 className="font-medium text-white font-titles-kumbh-sans text-right py-28 pb-44 uppercase text-[53px]">
+        <h2 className="font-medium text-white font-titles-kumbh-sans text-right py-28 pb-44 uppercase text-[53px] max-sm:text-center max-sm:text-[41px]">
           Conhecimento
         </h2>
 
         {/* All Cards */}
-        <div className="flex flex-row flex-wrap justify-around w-full">
+        <div className="flex flex-row flex-wrap max-sm:flex-col justify-around w-full max-sm:gap-24">
           {/* Card */}
-          <article className="flex flex-row flex-wrap justify-start max-2xl:justify-center gap-[20px] h-fit w-[36%] mb-28">
+          <article className="flex flex-row flex-wrap justify-start max-2xl:justify-center gap-[20px] h-fit w-[36%] mb-28 max-sm:w-full max-sm:m-0">
             <h3 className="font-titles-kumbh-sans font-medium text-4xl text-center uppercase w-full text-white pb-[30px]">
               Tecnologias
             </h3>
@@ -85,7 +76,7 @@ const App = () => {
           </article>
 
           {/* Card */}
-          <article className="flex flex-row flex-wrap justify-between max-2xl:justify-center pt-7 gap-[20px] h-fit w-[40%]">
+          <article className="flex flex-row flex-wrap justify-between max-2xl:justify-center pt-7 gap-[20px] h-fit w-[40%] max-sm:w-full">
             <h3 className="font-titles-kumbh-sans font-medium text-4xl text-center uppercase w-full text-white pb-[30px]">
               Frameworks e Libs
             </h3>
@@ -100,7 +91,7 @@ const App = () => {
           </article>
 
           {/* Card */}
-          <article className="flex flex-row flex-wrap justify-center gap-[20px] h-fit w-[36%]">
+          <article className="flex flex-row flex-wrap justify-center gap-[20px] h-fit w-[36%] max-sm:w-full">
             <h3 className="font-titles-kumbh-sans font-medium text-4xl text-center uppercase w-full text-white pb-[30px]">
               Bancos de dados e tecnologias
             </h3>
@@ -110,7 +101,7 @@ const App = () => {
           </article>
 
           {/* Card */}
-          <article className="flex flex-row flex-wrap justify-between max-2xl:justify-center pt-32 gap-[20px] h-fit w-[36%]">
+          <article className="flex flex-row flex-wrap justify-between max-2xl:justify-center pt-32 gap-[20px] h-fit w-[36%] max-sm:w-full max-sm:p-0 max-sm:pb-3">
             <h3 className="font-titles-kumbh-sans font-medium text-4xl text-center uppercase w-full text-white pb-[30px]">
               versionamento e gestão
             </h3>
@@ -122,52 +113,30 @@ const App = () => {
           </article>
 
           {/* Card Metodologias e documentações */}
-          <article className="flex flex-row flex-wrap justify-between gap-[20px] h-fit w-[40%]">
+          <article className="flex flex-row flex-wrap justify-between gap-[20px] h-fit w-[40%] max-sm:w-full">
             <h3 className="font-titles-kumbh-sans font-medium text-4xl text-center uppercase w-full text-white pb-[30px]">
               Metodologias e documentações
             </h3>
 
-            <p className="font-subtitles-roboto text-[25px] text-white text-opacity-75 py-[20px] w-full bg-[#393E46] text-center rounded-[16px] ">
-              SCRUM
-            </p>
-            <p className="font-subtitles-roboto text-[25px] text-white text-opacity-75 py-[20px] w-full bg-[#393E46] text-center rounded-[16px] ">
-              Metodologias Ágeis
-            </p>
-            <p className="font-subtitles-roboto text-[25px] text-white text-opacity-75 py-[20px] w-full bg-[#393E46] text-center rounded-[16px] ">
-              Documentação de Software
-            </p>
-            <p className="font-subtitles-roboto text-[25px] text-white text-opacity-75 py-[20px] w-full bg-[#393E46] text-center rounded-[16px] ">
-              Documentação de Requisitos
-            </p>
-            <p className="font-subtitles-roboto text-[25px] text-white text-opacity-75 py-[20px] w-full bg-[#393E46] text-center rounded-[16px] ">
-              Modelagem de Banco de Dados (MER e DER)
-            </p>
-            <p className="font-subtitles-roboto text-[25px] text-white text-opacity-75 py-[20px] w-full bg-[#393E46] text-center rounded-[16px] ">
-              Modelagem de Software (Diagramas UML)
-            </p>
-            <p className="font-subtitles-roboto text-[25px] text-white text-opacity-75 py-[20px] w-full bg-[#393E46] text-center rounded-[16px] ">
-              Swagger
-            </p>
+            <Paragraph children={"SCRUM"} />
+            <Paragraph children={"Metodologias Ágeis"} />
+            <Paragraph children={"Documentação de Software"} />
+            <Paragraph children={"Documentação de Requisitos"} />
+            <Paragraph children={"Modelagem de Banco de Dados (MER e DER)"} />
+            <Paragraph children={"Modelagem de Software (Diagramas UML)"} />
+            <Paragraph children={"Swagger"} />
           </article>
 
           {/* Card */}
-          <article className="flex flex-row flex-wrap justify-between pt-36 gap-[20px] h-fit w-[36%]">
+          <article className="flex flex-row flex-wrap justify-between pt-36 gap-[20px] h-fit w-[36%] max-sm:w-full">
             <h3 className="font-titles-kumbh-sans font-medium text-4xl text-center uppercase w-full text-white pb-[30px]">
               Qualidade e experiência
             </h3>
 
-            <p className="font-subtitles-roboto text-[27px] text-white text-opacity-75 py-[20px] w-[456px] bg-[#393E46] text-center rounded-[16px] ">
-              Testes de Software
-            </p>
-            <p className="font-subtitles-roboto text-[27px] text-white text-opacity-75 py-[20px] w-[456px] bg-[#393E46] text-center rounded-[16px] ">
-              Testes Unitários com xUnit e MOQ
-            </p>
-            <p className="font-subtitles-roboto text-[27px] text-white text-opacity-75 py-[20px] w-[456px] bg-[#393E46] text-center rounded-[16px] ">
-              UX (experiência do usuário)
-            </p>
-            <p className="font-subtitles-roboto text-[27px] text-white text-opacity-75 py-[20px] w-[456px] bg-[#393E46] text-center rounded-[16px] ">
-              UI (interface do usuário)
-            </p>
+            <SndParagraph children={"Testes de Software"} />
+            <SndParagraph children={"Testes Unitários com xUnit e MOQ"} />
+            <SndParagraph children={"UX (experiência do usuário)"} />
+            <SndParagraph children={"UI (interface do usuário)"} />
           </article>
         </div>
       </section>
@@ -175,18 +144,18 @@ const App = () => {
       {/* Projects Section */}
       <section
         id="projects"
-        className="flex flex-col items-center justify-center px-[5%] py-7 pb-20 h-[100%] bg-[#282A40] text-white uppercase text-right"
+        className="flex flex-col items-center justify-center px-[5%] py-7 pb-20 h-fit bg-[#282A40] text-white uppercase text-right bg-[url('/src/assets/projectlights.png')] bg-no-repeat bg-cover bg-[left_top_-30rem] max-lg:bg-[left_top_-45rem]"
       >
-        <h2 className="font-titles-kumbh-sans font-medium text-5xl text-white text-right w-[89%] py-28 text-[53px]">
+        <h2 className="font-titles-kumbh-sans font-medium text-5xl text-white text-right w-[89%] uppercase py-28 text-[53px] max-lg:text-center max-sm:text-[41px]">
           Projetos
         </h2>
 
         {/* Projeto 1 */}
-        <article className="flex items-center gap-11 h-[480px] w-[90%] mb-24">
+        <article className="flex items-center justify-start gap-11 w-[90%] mb-24 max-xl:flex-wrap max-xl:justify-center max-xl:gap-0">
           <img src={GamerTabletImg} alt="" />
 
           {/* Infos */}
-          <div className="flex flex-col items-start mt-20 h-full w-[500px] text-left">
+          <div className="flex flex-col items-start mt-20 h-full w-[500px] text-left max-xl:m-0">
             <h3 className="font-titles-jost text-[24px] uppercase tracking-widest">
               Projeto Gamer
             </h3>
@@ -211,7 +180,10 @@ const App = () => {
 
             {/* Links úteis */}
             <div className="flex justify-between w-[100px] mt-[-25px]">
-              <a target="_blank" href="https://github.com/LucasBO7/senai-curso-repos/tree/main/Back-end-2/Projeto_Gamer_mvc">
+              <a
+                target="_blank"
+                href="https://github.com/LucasBO7/senai-curso-repos/tree/main/Back-end-2/Projeto_Gamer_mvc"
+              >
                 <BsGithub className="w-[45px] h-[45px] p-[3px] text-[#8991dc] rounded-full hover:shadow-long hover:shadow-purple-mid transition-all duration-200" />
               </a>
 
@@ -223,10 +195,10 @@ const App = () => {
         </article>
 
         {/* Projeto 2 */}
-        <article className="flex items-center justify-end gap-11 h-[480px] w-[90%] mb-24">
+        <article className="flex items-end justify-end gap-11 h-fit w-[90%] mb-24 max-xl:flex-wrap-reverse max-xl:justify-center max-xl:gap-0">
           {/* Infos */}
-          <div className="flex flex-col items-start mt-20 h-full w-[500px] text-right">
-            <h3 className="font-titles-jost text-[24px] uppercase tracking-widest text-right">
+          <div className="flex flex-col items-start mt-20 h-full w-[500px] text-left max-xl:m-0">
+            <h3 className="font-titles-jost text-[24px] uppercase tracking-widest text-left">
               Projeto Gamer
             </h3>
             <p className="font-paragraphes-koulen text-[16px] text-justify tracking-widest text-purple-light pb-[36px]">
@@ -275,9 +247,9 @@ const App = () => {
       <ContactUsSection />
 
       <footer className="px-[5%] h-[345px] w-full bg-purple-dark">
-        <div className="w-full h-fit pt-[100px] flex flex-col items-center justify-center">
+        <div className="w-full h-fit pt-[100px] flex flex-col items-center justify-center max-sm:flex-row max-sm:justify-center max-sm:pt-20">
           {/* Section Links */}
-          <div className="flex justify-between w-[40%]">
+          <div className="flex justify-between w-[40%] max-sm:flex-col">
             <a
               className="flex justify-center font-titles-kumbh-sans text-white w-fit p-2 hover:animate-pulse"
               href="#presentation"
@@ -312,7 +284,7 @@ const App = () => {
           </div>
 
           {/* Social Medias */}
-          <div className="flex justify-between w-[180px] mt-20">
+          <div className="flex justify-between w-[180px] mt-20 max-sm:mt-0">
             <a href="" className="">
               <BiLogoGmail className="w-[45px] h-[45px] p-[5px] bg-gray-dark rounded-full text-gray-light hover:shadow-long hover:shadow-text-gray-light transition-all duration-200" />
             </a>
@@ -327,7 +299,7 @@ const App = () => {
           </div>
         </div>
 
-        <p className="h-[10%] font-titles-kumbh-sans text-right text-white bg-purple-dark">
+        <p className="h-[10%] font-titles-kumbh-sans text-right text-white bg-purple-dark max-sm:text-center mt-10">
           Terms of Service - Privacy Policy
         </p>
       </footer>

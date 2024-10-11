@@ -5,7 +5,7 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 
 export const FixedScrollBar = () => {
   return (
-    <div className="fixed flex flex-col items-center justify-around right-10 top-40 w-[64px] h-[300px] dark-gradient-bg rounded-full shadow-long shadow-black z-30">
+    <div className="fixed flex flex-col items-center justify-around right-10 top-40 w-[64px] h-[300px] dark-gradient-bg rounded-full shadow-long shadow-black z-50 max-sm:right-2 max-sm:w-14 max-sm:top-20">
       <a
         href="#presentation"
         className="flex justify-center font-titles-kumbh-sans text-white w-fit scroll-smooth hover:animate-pulse"
